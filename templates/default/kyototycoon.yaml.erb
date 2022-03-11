@@ -1,4 +1,4 @@
-<%= JSON.parse(({'logs' => @logs }).to_json).to_yaml %>
+<%= YAML.dump(JSON.parse(({'logs' => @logs }).to_json)).to_s %>
 
 #  Add one or more instances, which accept report_url,
 #  name, and optionally tags keys. The report URL should

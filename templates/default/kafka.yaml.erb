@@ -1,4 +1,4 @@
-<%= JSON.parse(({'logs' => @logs, 'instances' => @instances }).to_json).to_yaml %>
+<%= YAML.dump(JSON.parse(({'logs' => @logs, 'instances' => @instances }).to_json)).to_s %>
 
 <% if @version == 2 %>
 init_config:

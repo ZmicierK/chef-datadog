@@ -15,7 +15,7 @@
     instance['port'] = 5432 if (instance['port'].nil? and !instance['host'].start_with?('/'))
   end
 -%>
-<%= JSON.parse(({ 'instances' => instances, 'logs' => @logs }).to_json).to_yaml %>
+<%= YAML.dump(JSON.parse(({ 'instances' => instances, 'logs' => @logs }).to_json)).to_s %>
 
 init_config:
 # Nothing to configure here

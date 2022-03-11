@@ -1,4 +1,4 @@
-<%= JSON.parse(({'logs' => @logs }).to_json).to_yaml %>
+<%= YAML.dump(JSON.parse(({'logs' => @logs }).to_json)).to_s %>
 
 instances:
   <% @instances.each do |i| -%>

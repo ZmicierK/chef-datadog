@@ -1,8 +1,8 @@
 <%=
-{
+YAML.dump(JSON.parse({
   'install_method' => {
     'tool' => 'chef',
     'tool_version' => "chef-#{@chef_version}",
     'installer_version' => "datadog_cookbook-#{@cookbook_version}",
   },
-}.to_yaml %>
+}).to_json).to_s %>
